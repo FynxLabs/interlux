@@ -1,0 +1,20 @@
+# Dawn - teal-green accent. Light counterpart to Dusk.
+# Morning twilight to Dusk's evening twilight. Same teal-green
+# accent family, deepened for contrast against the cream
+# foundation. Light foundation (bg/panel/text + signals) is
+# shared across the light trio.
+
+theme {
+  palette {
+    bg:           "#f4f1e8"
+    panel:        "#ebe8df"
+    text:         "#2a2c2e"
+    accent:       "#3d7858"
+    dim:          "#6a7878"
+    structure:    "#d2cec0"
+    selection_bg: "#d8e8d8"
+    success_tint: "#3d7858"
+    warning:      "#d4892f"
+    error:        "#a01820"
+  }
+}

@@ -1,0 +1,21 @@
+# Ember - brick-orange accent. Ember's OOB face.
+# Warm, firelight quality. The brick-orange accent shifts the
+# structural tints toward brown-orange. Signals (success_tint /
+# warning / error) stay foundation-owned and semantic - green,
+# amber, crimson - so an "active" indicator and an "alert"
+# indicator are never the same color in the same theme.
+
+theme {
+  palette {
+    bg:           "#161618"
+    panel:        "#1e1e21"
+    text:         "#e0ddcf"
+    accent:       "#aa3d22"
+    dim:          "#5a4030"
+    structure:    "#2a2018"
+    selection_bg: "#2e1a10"
+    success_tint: "#5a9470"
+    warning:      "#c97e2a"
+    error:        "#8d161e"
+  }
+}

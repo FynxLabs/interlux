@@ -1,0 +1,19 @@
+# Dusk - teal-gray accent. Dusk's OOB face.
+# Quiet, structural, the "no fights for attention" baseline.
+# Dark foundation (bg/panel/text + signals) is shared across
+# the dark trio; Dusk owns only the accent family.
+
+theme {
+  palette {
+    bg:           "#161618"
+    panel:        "#1e1e21"
+    text:         "#e0ddcf"
+    accent:       "#5a9470"
+    dim:          "#4d6a6a"
+    structure:    "#2e3035"
+    selection_bg: "#1e3d2e"
+    success_tint: "#5a9470"
+    warning:      "#c97e2a"
+    error:        "#8d161e"
+  }
+}

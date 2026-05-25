@@ -1,0 +1,19 @@
+# Lustra - purple accent. Light counterpart to Umbra.
+# Named for the Latin sense of polished, reflected light - the
+# bright mirror to Umbra's cast shadow. Same purple accent
+# family, deepened for contrast against the cream foundation.
+
+theme {
+  palette {
+    bg:           "#f4f1e8"
+    panel:        "#ebe8df"
+    text:         "#2a2c2e"
+    accent:       "#5e4d8a"
+    dim:          "#6e6878"
+    structure:    "#d2cec0"
+    selection_bg: "#e0d8ec"
+    success_tint: "#3d7858"
+    warning:      "#d4892f"
+    error:        "#a01820"
+  }
+}

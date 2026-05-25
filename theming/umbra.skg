@@ -1,0 +1,19 @@
+# Umbra - dark purple accent. Umbra installer's OOB face.
+# Editorial, cooler than Dusk. Purple lives only in the accent
+# family; the dark foundation stays neutral. Dark foundation
+# (bg/panel/text + signals) is shared across the dark trio.
+
+theme {
+  palette {
+    bg:           "#161618"
+    panel:        "#1e1e21"
+    text:         "#e0ddcf"
+    accent:       "#7c6aaa"
+    dim:          "#555560"
+    structure:    "#2e2e32"
+    selection_bg: "#241a38"
+    success_tint: "#5a9470"
+    warning:      "#c97e2a"
+    error:        "#8d161e"
+  }
+}
