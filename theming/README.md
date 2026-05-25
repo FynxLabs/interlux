@@ -56,7 +56,7 @@ Breaking these values within a polarity is a loud move. Do it only when the tool
 
 ## Palette role contract
 
-Every theme file declares all 10 roles. Tools implement them however their rendering layer needs - lipgloss styles in a TUI, CSS variables in a GUI, hex strings in a config generator. The **role names are the contract**.
+Every theme file declares all 13 roles. Tools implement them however their rendering layer needs - lipgloss styles in a TUI, CSS variables in a GUI, hex strings in a config generator. The **role names are the contract**.
 
 **Foundation (shared per polarity):**
 
@@ -74,6 +74,14 @@ Every theme file declares all 10 roles. Tools implement them however their rende
 - `structure` - borders, inactive box backgrounds
 - `selection_bg` - background for selected or highlighted items
 
+**System icons (status indicators for tools that render them - wifi, battery, bluetooth, notifications, audio, etc.):**
+
+- `icon_active` - icon's thing is on / connected / normal - the default visible state
+- `icon_inactive` - icon's thing is soft-off (radio off, no connection)
+- `icon_disabled` - icon's thing is hard-off (no device present, missing backend)
+
+Icon roles are independent of the accent family on purpose: status icons need their own visual hierarchy distinct from "this thing is focused / selected." A wifi-connected indicator and a focused text field should not look the same.
+
 ## Tool personalities
 
 Each FynxLabs tool ships its dark theme as its face, with a light counterpart in the same accent family. The theme name matches the owning tool when there is one. The tables below show each theme's accent family - foundation values come from the polarity tables above.
@@ -88,56 +96,71 @@ Each FynxLabs tool ships its dark theme as its face, with a light counterpart in
 
 Owned by **dusk**, the X11 panel daemon. Dark polarity. Teal-gray accent that grows naturally out of the dark base.
 
-| Role           | Hex       |
-| -------------- | --------- |
-| `accent`       | `#5a9470` |
-| `dim`          | `#4d6a6a` |
-| `structure`    | `#2e3035` |
-| `selection_bg` | `#1e3d2e` |
+| Role            | Hex       |
+| --------------- | --------- |
+| `accent`        | `#5a9470` |
+| `dim`           | `#4d6a6a` |
+| `structure`     | `#2e3035` |
+| `selection_bg`  | `#1e3d2e` |
+| `icon_active`   | `#e0ddcf` |
+| `icon_inactive` | `#4d6a6a` |
+| `icon_disabled` | `#2e3035` |
 
 ### Dawn
 
 Light counterpart to Dusk. Light polarity. Same teal-green accent family, deepened for contrast against the cream foundation. Morning twilight to Dusk's evening twilight.
 
-| Role           | Hex       |
-| -------------- | --------- |
-| `accent`       | `#3d7858` |
-| `dim`          | `#6a7878` |
-| `structure`    | `#d2cec0` |
-| `selection_bg` | `#d8e8d8` |
+| Role            | Hex       |
+| --------------- | --------- |
+| `accent`        | `#3d7858` |
+| `dim`           | `#6a7878` |
+| `structure`     | `#d2cec0` |
+| `selection_bg`  | `#d8e8d8` |
+| `icon_active`   | `#2a2c2e` |
+| `icon_inactive` | `#6a7878` |
+| `icon_disabled` | `#d2cec0` |
 
 ### Umbra
 
 Owned by **umbra**, the Linux installer. Dark polarity. Purple accent, editorial and cooler than Dusk. Neutral dark base - purple earns its place through accent roles only.
 
-| Role           | Hex       |
-| -------------- | --------- |
-| `accent`       | `#7c6aaa` |
-| `dim`          | `#555560` |
-| `structure`    | `#2e2e32` |
-| `selection_bg` | `#241a38` |
+| Role            | Hex       |
+| --------------- | --------- |
+| `accent`        | `#7c6aaa` |
+| `dim`           | `#555560` |
+| `structure`     | `#2e2e32` |
+| `selection_bg`  | `#241a38` |
+| `icon_active`   | `#e0ddcf` |
+| `icon_inactive` | `#555560` |
+| `icon_disabled` | `#2e2e32` |
 
 ### Lustra
 
 Light counterpart to Umbra. Light polarity. Same purple accent family, deepened for contrast against the cream foundation. Named for the Latin sense of polished, reflected light - the bright mirror to Umbra's cast shadow.
 
-| Role           | Hex       |
-| -------------- | --------- |
-| `accent`       | `#5e4d8a` |
-| `dim`          | `#6e6878` |
-| `structure`    | `#d2cec0` |
-| `selection_bg` | `#e0d8ec` |
+| Role            | Hex       |
+| --------------- | --------- |
+| `accent`        | `#5e4d8a` |
+| `dim`           | `#6e6878` |
+| `structure`     | `#d2cec0` |
+| `selection_bg`  | `#e0d8ec` |
+| `icon_active`   | `#2a2c2e` |
+| `icon_inactive` | `#6e6878` |
+| `icon_disabled` | `#d2cec0` |
 
 ### Ember
 
 Owned by **ember**, the clipboard tool. Dark polarity. A warm brick-orange personality that reads distinctly different from Dusk and Umbra. Available for any other tool that wants to wear it.
 
-| Role           | Hex       |
-| -------------- | --------- |
-| `accent`       | `#aa3d22` |
-| `dim`          | `#5a4030` |
-| `structure`    | `#2a2018` |
-| `selection_bg` | `#2e1a10` |
+| Role            | Hex       |
+| --------------- | --------- |
+| `accent`        | `#aa3d22` |
+| `dim`           | `#5a4030` |
+| `structure`     | `#2a2018` |
+| `selection_bg`  | `#2e1a10` |
+| `icon_active`   | `#e0ddcf` |
+| `icon_inactive` | `#5a4030` |
+| `icon_disabled` | `#2a2018` |
 
 Ember's accent is brick-orange. Its `success_tint` is still green, `warning` still amber, `error` still crimson - same as Dusk and Umbra. Signals carry meaning; theme accent is personality.
 
@@ -145,18 +168,21 @@ Ember's accent is brick-orange. Its `success_tint` is still green, `warning` sti
 
 Light counterpart to Ember. Light polarity. Same brick-orange accent family. Where Ember is the dying glow, Kindle is the first flame - the bright mirror to Ember's warm dim.
 
-| Role           | Hex       |
-| -------------- | --------- |
-| `accent`       | `#a3361c` |
-| `dim`          | `#8a6a55` |
-| `structure`    | `#d2cec0` |
-| `selection_bg` | `#f0dac8` |
+| Role            | Hex       |
+| --------------- | --------- |
+| `accent`        | `#a3361c` |
+| `dim`           | `#8a6a55` |
+| `structure`     | `#d2cec0` |
+| `selection_bg`  | `#f0dac8` |
+| `icon_active`   | `#2a2c2e` |
+| `icon_inactive` | `#8a6a55` |
+| `icon_disabled` | `#d2cec0` |
 
 Same signal rule as Ember: `success_tint` green, `warning` amber, `error` crimson.
 
 ## Per-tool rendering maps
 
-Tools that need to translate role names into third-party desktop configs (rofi, openbox, dunst, picom, terminal) keep those maps local. Tenebrux, for example, carries its per-application color maps in `tenebrux/docs/theme.md`. Other tools do the same - derive from the role names above in whatever shape their rendering layer wants.
+Tools that need to translate role names into third-party desktop configs (rofi, openbox, dunst, picom, terminal) keep those maps local in their own repo. Derive from the role names above in whatever shape the rendering layer wants.
 
 ## Colorblind variants
 

@@ -6,15 +6,18 @@
 
 theme {
   palette {
-    bg:           "#f4f1e8"
-    panel:        "#ebe8df"
-    text:         "#2a2c2e"
-    accent:       "#a3361c"
-    dim:          "#8a6a55"
-    structure:    "#d2cec0"
-    selection_bg: "#f0dac8"
-    success_tint: "#3d7858"
-    warning:      "#d4892f"
-    error:        "#a01820"
+    bg:            "#f4f1e8"
+    panel:         "#ebe8df"
+    text:          "#2a2c2e"
+    accent:        "#a3361c"
+    dim:           "#8a6a55"
+    structure:     "#d2cec0"
+    selection_bg:  "#f0dac8"
+    success_tint:  "#3d7858"
+    warning:       "#d4892f"
+    error:         "#a01820"
+    icon_active:   "#2a2c2e"
+    icon_inactive: "#8a6a55"
+    icon_disabled: "#d2cec0"
   }
 }

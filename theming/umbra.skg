@@ -5,15 +5,18 @@
 
 theme {
   palette {
-    bg:           "#161618"
-    panel:        "#1e1e21"
-    text:         "#e0ddcf"
-    accent:       "#7c6aaa"
-    dim:          "#555560"
-    structure:    "#2e2e32"
-    selection_bg: "#241a38"
-    success_tint: "#5a9470"
-    warning:      "#c97e2a"
-    error:        "#8d161e"
+    bg:            "#161618"
+    panel:         "#1e1e21"
+    text:          "#e0ddcf"
+    accent:        "#7c6aaa"
+    dim:           "#555560"
+    structure:     "#2e2e32"
+    selection_bg:  "#241a38"
+    success_tint:  "#5a9470"
+    warning:       "#c97e2a"
+    error:         "#8d161e"
+    icon_active:   "#e0ddcf"
+    icon_inactive: "#555560"
+    icon_disabled: "#2e2e32"
   }
 }

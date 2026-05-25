@@ -7,15 +7,18 @@
 
 theme {
   palette {
-    bg:           "#161618"
-    panel:        "#1e1e21"
-    text:         "#e0ddcf"
-    accent:       "#aa3d22"
-    dim:          "#5a4030"
-    structure:    "#2a2018"
-    selection_bg: "#2e1a10"
-    success_tint: "#5a9470"
-    warning:      "#c97e2a"
-    error:        "#8d161e"
+    bg:            "#161618"
+    panel:         "#1e1e21"
+    text:          "#e0ddcf"
+    accent:        "#aa3d22"
+    dim:           "#5a4030"
+    structure:     "#2a2018"
+    selection_bg:  "#2e1a10"
+    success_tint:  "#5a9470"
+    warning:       "#c97e2a"
+    error:         "#8d161e"
+    icon_active:   "#e0ddcf"
+    icon_inactive: "#5a4030"
+    icon_disabled: "#2a2018"
   }
 }
