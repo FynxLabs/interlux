@@ -4,7 +4,7 @@ The FynxLabs design language. Shared roots, own personality, nothing competes.
 
 Interlux is the visual identity every FynxLabs tool grows from - foundation colors, palette role names, signal semantics, and the rules any UI in the family follows. Each tool ships its own theme as its face (**Dusk**, **Umbra**, **Ember** in dark; **Dawn**, **Lustra**, **Kindle** in light), but they're all wearing Interlux underneath.
 
-This is **reference**, not a shared module. Nothing here is imported by code. Each tool (dusk, umbra, tenebrux, rwr, sentri, …) ships its own theme on its own terms - same roots, own personality. Read the docs here to know *what* the shared values and rules are, then make the thing yours.
+This is **reference**, not a shared module. Nothing here is imported by code. Each tool (dusk, umbra, tenebrux, ember, etc...) ships its own theme on its own terms - same roots, own personality. Read the docs here to know *what* the shared values and rules are, then make the thing yours.
 
 **Scope:** this directory is for things that are true across every FynxLabs tool. Brand identity, foundation colors, palette roles, and the rules that keep every tool's UI feeling like part of the same family. Tool-specific feature design (wizard flows, installer pages, CLI syntax, module contracts) does **not** belong here - it lives in each tool's own `docs/`.
 
