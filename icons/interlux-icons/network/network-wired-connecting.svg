@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    .wired-pulse {
+      animation: ilx-wired-breath 1.6s ease-in-out infinite;
+    }
+    @keyframes ilx-wired-breath {
+      0%, 100% { opacity: 0.4; }
+      50%      { opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .wired-pulse { animation: none; opacity: 0.7; }
+    }
+  </style>
+  <g class="wired-pulse">
+    <rect x="2" y="9" width="3.5" height="4" rx="0.5"/>
+    <rect x="10.5" y="9" width="3.5" height="4" rx="0.5"/>
+    <rect x="6" y="2" width="4" height="4" rx="0.5"/>
+    <path d="M8 6v1.5M3.75 9V7.5h8.5V9"/>
+  </g>
+</svg>

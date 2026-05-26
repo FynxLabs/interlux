@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    .bt-pulse {
+      animation: ilx-bt-breath 1.6s ease-in-out infinite;
+    }
+    @keyframes ilx-bt-breath {
+      0%, 100% { opacity: 0.4; }
+      50%      { opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .bt-pulse { animation: none; opacity: 0.7; }
+    }
+  </style>
+  <path class="bt-pulse" d="M4.5 5l7 6L8 13.5v-11L11.5 5l-7 6"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25">
+  <g class="ilx-glyph" stroke="var(--ilx-warning, #c97e2a)">
+    <path d="M4.5 5l7 6L8 13.5v-11L11.5 5l-7 6"/>
+  </g>
+  <g class="ilx-badge">
+    <circle cx="13.25" cy="2.75" r="2.5" fill="var(--ilx-warning, #c97e2a)" stroke="var(--ilx-bg, #161618)" stroke-width="0.6"/>
+    <path d="M13.25 1.65v1.6" stroke="var(--ilx-bg, #161618)" stroke-width="0.85"/>
+    <circle cx="13.25" cy="3.95" r="0.35" fill="var(--ilx-bg, #161618)" stroke="none"/>
+  </g>
+</svg>

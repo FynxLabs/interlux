@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+  <circle cx="13.25" cy="2.75" r="2.5"
+          fill="var(--ilx-accent, #5a9470)"
+          stroke="var(--ilx-bg, #161618)" stroke-width="0.6"/>
+  <text x="13.25" y="3.85"
+        font-family="ui-monospace, monospace"
+        font-size="3.3" font-weight="600"
+        fill="var(--ilx-bg, #161618)"
+        text-anchor="middle" stroke="none">3</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    .wifi-arc { animation: ilx-wifi-pulse 1.5s ease-in-out infinite; }
+    .wifi-arc-1 { animation-delay: 0s; }
+    .wifi-arc-2 { animation-delay: 0.25s; }
+    .wifi-arc-3 { animation-delay: 0.5s; }
+    .wifi-dot { animation: ilx-wifi-dot 1.5s ease-in-out infinite; animation-delay: 0.75s; }
+    @keyframes ilx-wifi-pulse {
+      0%, 60%, 100% { opacity: 0.25; }
+      30%           { opacity: 1; }
+    }
+    @keyframes ilx-wifi-dot {
+      0%, 60%, 100% { opacity: 0.25; }
+      30%           { opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .wifi-arc, .wifi-dot { animation: none; opacity: 0.6; }
+    }
+  </style>
+  <path class="wifi-arc wifi-arc-3" d="M1.5 6.5a10 10 0 0 1 13 0"/>
+  <path class="wifi-arc wifi-arc-2" d="M3.5 9a7 7 0 0 1 9 0"/>
+  <path class="wifi-arc wifi-arc-1" d="M5.5 11.5a4 4 0 0 1 5 0"/>
+  <circle class="wifi-dot" cx="8" cy="13.5" r="0.75" fill="currentColor" stroke="none"/>
+</svg>

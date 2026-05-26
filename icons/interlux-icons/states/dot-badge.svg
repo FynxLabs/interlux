@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+  <circle cx="13" cy="3" r="2"
+          fill="var(--ilx-accent, #5a9470)"
+          stroke="var(--ilx-bg, #161618)" stroke-width="0.6"/>
+</svg>

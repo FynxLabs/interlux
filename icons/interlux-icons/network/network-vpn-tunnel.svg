@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    .tunnel-ball {
+      animation:
+        ilx-tunnel-slide 2.4s ease-in-out infinite alternate,
+        ilx-tunnel-color 2.4s ease-in-out infinite alternate;
+    }
+    @keyframes ilx-tunnel-slide {
+      0%   { transform: translateX(-3px); }
+      100% { transform: translateX(3px); }
+    }
+    @keyframes ilx-tunnel-color {
+      0%, 100% { fill: var(--ilx-accent, #5a9470); }
+      50%      { fill: currentColor; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .tunnel-ball { animation: none; fill: var(--ilx-accent, #5a9470); }
+    }
+  </style>
+  <ellipse cx="3.5" cy="8" rx="1.75" ry="2.75"/>
+  <circle class="tunnel-ball" cx="8" cy="8" r="1" fill="var(--ilx-accent, #5a9470)" stroke="none"/>
+  <ellipse cx="12.5" cy="8" rx="1.75" ry="2.75"/>
+  <path d="M3.5 5.25h9M3.5 10.75h9"/>
+</svg>

@@ -1,0 +1,131 @@
+/* Interlux Icons - Motion Profiles
+ *
+ * Composable motion classes. Apply to the icon host container along with
+ * --ilx-motion-target to control what gets animated.
+ *
+ * Example:
+ *   <div class="icon-host ilx-pulse" style="--ilx-motion-target: overlay">
+ *     <img src="bell.svg">
+ *     <img src="states/dot-badge.svg">
+ *   </div>
+ *
+ * See MOTION.md for the full behavior contract.
+ */
+
+/* Motion target selectors
+ *
+ * Default behavior: animate the whole host (glyph + overlays).
+ * Override via --ilx-motion-target on the host element.
+ *
+ * Note: targeting depends on host structure. The reference contract assumes
+ * the first child SVG is the glyph and subsequent SVGs are overlays.
+ */
+
+[style*="--ilx-motion-target: glyph"] > :first-child { animation-play-state: running; }
+[style*="--ilx-motion-target: glyph"] > :not(:first-child) { animation: none !important; }
+[style*="--ilx-motion-target: overlay"] > :first-child { animation: none !important; }
+[style*="--ilx-motion-target: overlay"] > :not(:first-child) { animation-play-state: running; }
+[style*="--ilx-motion-target: none"] > * { animation: none !important; }
+
+/* Reduced motion respect - applies to all profiles */
+@media (prefers-reduced-motion: reduce) {
+  .ilx-breathe > *,
+  .ilx-pulse > *,
+  .ilx-heartbeat > *,
+  .ilx-shimmer > *,
+  .ilx-heat-warn > *,
+  .ilx-heat-error > *,
+  .ilx-glow-once > * {
+    animation: none !important;
+  }
+  .ilx-breathe > *, .ilx-shimmer > * { opacity: 0.85; }
+  .ilx-heat-warn > * { color: var(--ilx-warning, #c97e2a); }
+  .ilx-heat-error > * { color: var(--ilx-error, #8d161e); }
+}
+
+/* breathe - slow opacity oscillation, ambient presence */
+.ilx-breathe > * {
+  animation: ilx-breathe 2s ease-in-out infinite alternate;
+}
+@keyframes ilx-breathe {
+  from { opacity: 0.5; }
+  to   { opacity: 1.0; }
+}
+
+/* pulse - opacity + scale, active attention */
+.ilx-pulse > * {
+  animation: ilx-pulse 1.4s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+@keyframes ilx-pulse {
+  from { opacity: 0.7; transform: scale(0.92); }
+  to   { opacity: 1.0; transform: scale(1.08); }
+}
+
+/* heartbeat - two quick pulses, pause, repeat */
+.ilx-heartbeat > * {
+  animation: ilx-heartbeat 1.5s ease-out infinite;
+  transform-origin: center;
+}
+@keyframes ilx-heartbeat {
+  0%   { transform: scale(1.0); }
+  14%  { transform: scale(1.12); }
+  28%  { transform: scale(1.0); }
+  42%  { transform: scale(1.12); }
+  56%  { transform: scale(1.0); }
+  100% { transform: scale(1.0); }
+}
+
+/* shimmer - traveling opacity wave, loading/syncing */
+.ilx-shimmer > * {
+  animation: ilx-shimmer 1.8s linear infinite;
+}
+@keyframes ilx-shimmer {
+  0%   { opacity: 0.6; }
+  50%  { opacity: 1.0; }
+  100% { opacity: 0.6; }
+}
+
+/* heat-warn - color shifts text to warning, escalating */
+.ilx-heat-warn > * {
+  animation: ilx-heat-warn 3s ease-in-out infinite alternate;
+}
+@keyframes ilx-heat-warn {
+  from { color: var(--ilx-text-base, #e0ddcf); }
+  to   { color: var(--ilx-warning, #c97e2a); }
+}
+
+/* heat-error - color shifts warning to error, critical */
+.ilx-heat-error > * {
+  animation: ilx-heat-error 1s ease-in-out infinite alternate;
+}
+@keyframes ilx-heat-error {
+  from { color: var(--ilx-warning, #c97e2a); }
+  to   { color: var(--ilx-error, #8d161e); }
+}
+
+/* glow-once - one-shot flash, fires on apply */
+.ilx-glow-once > * {
+  animation: ilx-glow-once 0.6s ease-out;
+  transform-origin: center;
+}
+@keyframes ilx-glow-once {
+  0%   { transform: scale(1.0); opacity: 0.6; }
+  50%  { transform: scale(1.15); opacity: 1.0; }
+  100% { transform: scale(1.0); opacity: 1.0; }
+}
+
+/* Heat-aware auto-escalation
+ *
+ * Hosts set --ilx-heat (0.0 to 1.0). CSS variable comparisons require
+ * @container queries or JS for true threshold logic. Until support is
+ * universal, recommend hosts apply the appropriate motion class directly
+ * based on their own heat calculation.
+ *
+ * Example (host-side logic):
+ *   if (heat < 0.3) noClass
+ *   else if (heat < 0.5) .ilx-breathe
+ *   else if (heat < 0.7) .ilx-heat-warn
+ *   else if (heat < 0.9) .ilx-pulse
+ *   else .ilx-heartbeat (and --ilx-glyph-color: var(--ilx-error))
+ */

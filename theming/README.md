@@ -184,6 +184,10 @@ Same signal rule as Ember: `success_tint` green, `warning` amber, `error` crimso
 
 Tools that need to translate role names into third-party desktop configs (rofi, openbox, dunst, picom, terminal) keep those maps local in their own repo. Derive from the role names above in whatever shape the rendering layer wants.
 
+## Icons
+
+The icon layer of Interlux lives in [`../icons/`](../icons). Icons consume the role names defined here through `--ilx-*` CSS variables (`--ilx-text`, `--ilx-accent`, `--ilx-error`, ...) and stay signal-stable across themes - `error` is crimson in every theme, `--ilx-error` resolves to that crimson everywhere. See [`../icons/SPEC.md`](../icons/SPEC.md) for the icon-theme contract.
+
 ## Colorblind variants
 
 Deuteranopia / Protanopia and Tritanopia variants land here once the base personalities are stable and there's a real test rendering pipeline to validate against.

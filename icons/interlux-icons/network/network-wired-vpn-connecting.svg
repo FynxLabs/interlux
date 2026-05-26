@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    .shield-outline {
+      animation: ilx-shield-breath 1.6s ease-in-out infinite;
+    }
+    @keyframes ilx-shield-breath {
+      0%, 100% { opacity: 0.45; }
+      50%      { opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .shield-outline { animation: none; opacity: 0.7; }
+    }
+  </style>
+  <path class="shield-outline" d="M8 1.5L2.5 3.5v4c0 3.5 2.5 6 5.5 7 3-1 5.5-3.5 5.5-7v-4L8 1.5z"/>
+  <path d="M 5.949 7.535 L 5.949 5.645 M 8 7.535 L 8 5.645 M 10.052 7.535 L 10.052 5.645" stroke-width="0.8"/>
+  <path d="M 4.446 8.494 L 4.446 9.869 L 11.553 9.869 L 11.553 8.494" stroke-width="1"/>
+</svg>

@@ -1,0 +1,55 @@
+# interlux-icons theme manifest.
+
+theme {
+  name:        "interlux-icons"
+  display:     "Interlux Icons"
+  version:     "0.6.1"
+  description: "Default Interlux icon theme. ~208 icons across 15 categories. System status, navigation, media, file ops, view modes, hardware, peripherals, user, shapes, and primitives. Composable overlays and 7 motion profiles."
+
+  polarity: "neutral"
+
+  style {
+    weight:      "regular"
+    canvas:      16
+    stroke:      1.25
+    caps:        "round"
+    monochrome:  true
+  }
+
+  categories [
+    "states"        # composable overlays (tier 1, required)
+    "network"       # wired, wireless, vpn, ethernet (tier 1)
+    "audio"         # volume states (tier 1)
+    "system"        # power, notifications, time, calendar, stats, launcher, menu (tier 1)
+    "bluetooth"     # bluetooth states (tier 1)
+    "battery"       # battery states + dynamic (tier 1)
+    "ui"            # plus, minus, x, check, arrows, chevrons, info, etc (tier 2)
+    "file"          # file, folder, save, copy, paste, trash (tier 2)
+    "view"          # list, grid, kanban, eye, lock, zoom, fullscreen (tier 2)
+    "hardware"      # disk, monitor, usb, port plates (tier 2)
+    "media"         # play, pause, stop, prev, next, shuffle, repeat (tier 2)
+    "peripherals"   # keyboard, mouse, speaker variants (tier 2)
+    "user"          # user, accessibility, privacy (tier 2)
+    "shape"         # star, circle, square, triangle, diamond, heart (outlined + filled) (tier 2)
+    "windowlist"    # window list variants (tier 2)
+  ]
+
+  features {
+    animated_charging:      true
+    animated_connecting:    true
+    animated_vpn_tunnel:    true
+    composable_overlays:    true
+    overlay_count:          6
+    motion_profiles:        true
+    motion_profile_count:   7
+    heat_aware:             true
+    heat_aware_icons [
+      "calendar-heat"
+    ]
+    outlined_filled_pairs:  true
+    warning_variants:       true
+    bluetooth_connected:    true
+    battery_dynamic_fill:   true
+    vpn_connected_state:    true
+  }
+}
