@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
   <style>
     .shield-outline {
       animation: ilx-shield-breath 1.6s ease-in-out infinite;
@@ -12,6 +12,7 @@
     }
   </style>
   <path class="shield-outline" d="M8 1.5L2.5 3.5v4c0 3.5 2.5 6 5.5 7 3-1 5.5-3.5 5.5-7v-4L8 1.5z"/>
-  <path d="M 5.949 7.535 L 5.949 5.645 M 8 7.535 L 8 5.645 M 10.052 7.535 L 10.052 5.645" stroke-width="0.8"/>
-  <path d="M 4.446 8.494 L 4.446 9.869 L 11.553 9.869 L 11.553 8.494" stroke-width="1"/>
+  <g transform="translate(5 5) scale(0.0117)" fill="currentColor" stroke="none">
+    <path d="M480,70.512h-57.744V32V0h-32H121.728h-32v32v38.512H32H0v32V480v32h32h53.608h32h12.56h54.184h32h12.56h54.168h32h12.56h54.184h32h12.56H480h32v-32V102.512v-32H480z M480,480h-53.616v-97.328h-44.56V480H327.64v-97.328h-44.56V480h-54.168v-97.328h-44.56V480h-54.184v-97.328h-44.56V480H32V102.512h89.728V32h268.528v70.512H480V480z"/>
+  </g>
 </svg>

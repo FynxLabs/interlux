@@ -10,7 +10,7 @@ This is the icon layer of Interlux. Sibling to [`../theming/`](../theming): them
 | ----------------------------------- | -------------------------------------------------------------------------------------- |
 | [`SPEC.md`](SPEC.md)                | The icon-theme contract. Required categories, color variables, composition rules.      |
 | [`MOTION.md`](MOTION.md)            | Motion-profile contract. Behavior specs for the seven shared profiles.                 |
-| [`interlux-icons/`](interlux-icons) | Default theme. Reference implementation of the spec - ~208 icons across 15 categories. |
+| [`interlux-icons/`](interlux-icons) | Default theme. Reference implementation of the spec - ~218 icons across 15 categories. |
 | [`index.html`](index.html)          | Self-contained browser showcase (all SVGs inlined). Deployed as the Pages site.        |
 
 ## The shape
@@ -37,3 +37,18 @@ Read [`SPEC.md`](SPEC.md). Short version:
 4. Validate at 16px first.
 
 A theme can express personality through stroke weight, caps, fill style, level of detail. It can NOT change which icons exist, what they mean, or what color signals carry.
+
+## Attribution
+
+Several glyphs are derived from third-party icon sets, sourced via [SVG Repo](https://www.svgrepo.com/) and re-fitted to the Interlux color contract (`currentColor` + `--ilx-*` variables). Paths are copied verbatim or simplified for the 16x16 canvas; underlying geometry is the original author's. Every other glyph in `interlux-icons/` is original to this project.
+
+> **Licensing note:** the repo is [MIT](../LICENSE), but `system/linux.svg` is derived from the HashiCorp Design System and remains under MPL-2.0 (it is not relicensed). The full carve-out is documented in [`LICENSE`](../LICENSE).
+
+| Glyph(s)                                                                                                                            | Author                                                                                 | License       | Source                               |
+| ----------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ------------- | ------------------------------------ |
+| `file/cut.svg`, `file/cut-filled.svg`                                                                                               | [Ionicons](https://github.com/ionic-team/ionicons?ref=svgrepo.com)                     | MIT           | [SVG Repo](https://www.svgrepo.com/) |
+| `system/stats-ram.svg`, `user/accessibility.svg`                                                                                    | [VMware Clarity](https://github.com/vmware/clarity-assets?ref=svgrepo.com)             | MIT           | [SVG Repo](https://www.svgrepo.com/) |
+| `system/linux.svg`                                                                                                                  | [HashiCorp Design System](https://github.com/hashicorp/design-system/?ref=svgrepo.com) | MPL           | [SVG Repo](https://www.svgrepo.com/) |
+| `hardware/usb.svg` (3-prong USB logo)                                                                                               | [Zondicons / Steve Schoger](https://www.zondicons.com/?ref=svgrepo.com)                | Public Domain | [SVG Repo](https://www.svgrepo.com/) |
+| `peripherals/speaker.svg`                                                                                                           | [Icooon Mono](https://icooon-mono.com/?ref=svgrepo.com)                                | Public Domain | [SVG Repo](https://www.svgrepo.com/) |
+| `network/network-ethernet.svg`, `hardware/disk-interior.svg`, `hardware/gpu.svg`, `hardware/usb-drive.svg`, `peripherals/mouse.svg` | (uncredited / public domain)                                                           | Public Domain | [SVG Repo](https://www.svgrepo.com/) |

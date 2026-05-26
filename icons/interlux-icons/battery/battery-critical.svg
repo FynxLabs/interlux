@@ -2,6 +2,7 @@
   <style>
     .critical-fill {
       transform-origin: 2.25px 8px;
+      transform: scaleX(0.12);
       animation: ilx-battery-critical 1.2s ease-in-out infinite;
     }
     @keyframes ilx-battery-critical {

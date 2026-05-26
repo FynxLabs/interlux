@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    .critical-fill-v {
+      transform-origin: 8px 14.25px;
+      transform: scaleY(0.12);
+      animation: ilx-battery-critical-v 1.2s ease-in-out infinite;
+    }
+    @keyframes ilx-battery-critical-v {
+      0%, 100% { transform: scaleY(0.08); opacity: 1; }
+      50%      { transform: scaleY(0.18); opacity: 0.7; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .critical-fill-v { animation: none; transform: scaleY(0.12); opacity: 1; }
+    }
+  </style>
+  <rect x="2.5" y="2" width="11" height="13.5" rx="1.25"/>
+  <path d="M6.5 1H9.5" stroke-width="1.5"/>
+  <rect class="critical-fill-v"
+        x="3.75" y="3.25" width="8.5" height="11" rx="0.3"
+        fill="var(--ilx-error, #8d161e)"
+        stroke="none"/>
+</svg>

@@ -3,8 +3,8 @@
 theme {
   name:        "interlux-icons"
   display:     "Interlux Icons"
-  version:     "0.6.1"
-  description: "Default Interlux icon theme. ~208 icons across 15 categories. System status, navigation, media, file ops, view modes, hardware, peripherals, user, shapes, and primitives. Composable overlays and 7 motion profiles."
+  version:     "0.7.0"
+  description: "Default Interlux icon theme. ~218 icons across 15 categories. System status, navigation, media, file ops, view modes, hardware, peripherals, user, shapes, and primitives. Horizontal and vertical battery orientations. Composable overlays and 7 motion profiles."
 
   polarity: "neutral"
 
@@ -50,6 +50,8 @@ theme {
     warning_variants:       true
     bluetooth_connected:    true
     battery_dynamic_fill:   true
+    battery_horizontal:     true
+    battery_vertical:       true
     vpn_connected_state:    true
   }
 }

@@ -52,3 +52,7 @@ The two layers compose. An icon never knows what color it is - the host (tool's 
 | **Kindle** | Ember       | brick-orange    |
 
 Each pair is a true mirror: Dusk ↔ Dawn (the two thresholds of day), Umbra ↔ Lustra (shadow cast vs. light cast, both Latin), Ember ↔ Kindle (fire dying vs. fire being born).
+
+## License
+
+[MIT](LICENSE), with one exception: [`icons/interlux-icons/system/linux.svg`](icons/interlux-icons/system/linux.svg) is derived from the HashiCorp Design System and remains under MPL-2.0. Other third-party glyphs are also MIT-compatible or public domain; see the third-party section of [LICENSE](LICENSE) and the [icons attribution table](icons/README.md#attribution) for the full list.

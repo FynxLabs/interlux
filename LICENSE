@@ -1,0 +1,66 @@
+MIT License
+
+Copyright (c) 2026 FynxLabs
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Third-party glyph licensing
+===========================
+
+Most glyphs in `icons/interlux-icons/` are original to this project and ship
+under the MIT license above. The exceptions and their original licenses are:
+
+  icons/interlux-icons/system/linux.svg
+    Derived from the HashiCorp Design System (https://github.com/hashicorp/design-system).
+    Licensed under the Mozilla Public License 2.0 (MPL-2.0). This single file is
+    NOT relicensed under MIT; it remains under MPL-2.0 and downstream consumers
+    must comply with MPL-2.0 terms for this file. The full MPL-2.0 text is
+    available at https://www.mozilla.org/en-US/MPL/2.0/.
+
+The following glyphs were derived from MIT-licensed third-party sources. They
+are included under their original MIT license, compatible with this repo's MIT
+license:
+
+  icons/interlux-icons/file/cut.svg
+  icons/interlux-icons/file/cut-filled.svg
+    Derived from Ionicons (https://github.com/ionic-team/ionicons), MIT.
+
+  icons/interlux-icons/system/stats-ram.svg
+  icons/interlux-icons/user/accessibility.svg
+    Derived from VMware Clarity Assets (https://github.com/vmware/clarity-assets), MIT.
+
+The following glyphs were derived from public-domain sources (sourced via
+SVG Repo, https://www.svgrepo.com/) and carry no licensing restrictions:
+
+  icons/interlux-icons/hardware/usb.svg
+    Zondicons / Steve Schoger.
+
+  icons/interlux-icons/peripherals/speaker.svg
+    Icooon Mono.
+
+  icons/interlux-icons/network/network-ethernet.svg
+  icons/interlux-icons/hardware/disk-interior.svg
+  icons/interlux-icons/hardware/gpu.svg
+  icons/interlux-icons/hardware/usb-drive.svg
+  icons/interlux-icons/peripherals/mouse.svg
+    Uncredited public-domain icons.
+
+See icons/README.md for the human-readable attribution table.

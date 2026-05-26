@@ -95,6 +95,14 @@ Every Interlux theme MUST ship these. They are the panel status set plus the com
     battery-dynamic.svg
 ```
 
+#### Battery orientation
+
+The required `battery-*` set defaults to **horizontal** orientation (terminal on the right). Themes MAY ship a parallel **vertical** set (`battery-vertical-empty.svg`, `battery-vertical-low.svg`, ..., `battery-vertical-charging.svg`, ..., `battery-vertical-dynamic.svg`) for hosts that prefer a portrait-axis battery glyph (e.g., tall panel slots, mobile-style status bars). When shipped, the vertical set MUST mirror the horizontal set's state contract one-for-one and use the same color bindings. The reference theme ships both orientations - hosts choose whichever fits their layout.
+
+#### Battery fill style
+
+The reference theme renders both orientations with a dim base path (`fill-opacity="0.3"` over the full body, terminal included) and a solid path on top covering the charged portion. Horizontal batteries split left (charged) / right (empty); vertical batteries split bottom (charged) / top (empty). State colors (warning amber, critical/error red, success green for charging) bind through `--ilx-warning`, `--ilx-error`, and `--ilx-success`. Themes MAY use a different fill style (outline + meter bar, segmented bars, etc.) as long as the level and state are unambiguous at 16px.
+
 ### Tier 2: recommended
 
 These categories carry the rest of the Interlux first-party vocabulary - UI primitives, file ops, view modes, hardware, media, shapes, user. The reference theme ships all of them. Themes SHOULD ship them; if omitted, consumers fall back to `interlux-icons` for that category.
@@ -102,9 +110,9 @@ These categories carry the rest of the Interlux first-party vocabulary - UI prim
 | Category | Purpose | Reference theme count |
 |---|---|---|
 | `ui/` | Plus, minus, x, check, arrows, chevrons, info, question, refresh, more-horizontal/vertical, external-link - outlined + filled pairs | 38 |
-| `file/` | File, folder, folder-open, copy, cut, paste, save, trash, edit, download, upload | 11 |
+| `file/` | File, folder, folder-open, copy, cut (outlined + filled), paste, save, trash, edit, download, upload | 12 |
 | `view/` | Eye / eye-slash, lock / unlock, zoom in/out, fullscreen, collapse, expand, grid, list, kanban | 12 |
-| `hardware/` | Disk + interior, monitor, USB, USB drive, port plates (HDMI, DisplayPort, USB-C) | 10 |
+| `hardware/` | Disk + interior, monitor, GPU, USB, USB drive, port plates (HDMI, DisplayPort, USB-C) | 11 |
 | `media/` | Play, pause, stop, prev, next, skip-back/fwd, rewind, fast-forward, shuffle, repeat, repeat-one, music-note - outlined + filled pairs | 22 |
 | `peripherals/` | Keyboard, mouse, speaker (front / side / mute / volume up / down) | 8 |
 | `user/` | User, user-circle, user-filled, users, accessibility, privacy, privacy-mask | 7 |
