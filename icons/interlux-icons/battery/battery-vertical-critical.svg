@@ -15,8 +15,17 @@
   </style>
   <rect x="2.5" y="2" width="11" height="13.5" rx="1.25"/>
   <path d="M6.5 1H9.5" stroke-width="1.5"/>
+  <!--
+    Static SVG-attribute transform mirrors the CSS `.critical-fill-v`
+    rule (scaleY(0.12) around x=8, y=14.25 — the bottom centre of
+    the inner battery rect) so renderers without CSS transform
+    support (e.g. librsvg) display the critical-low strip at the
+    BOTTOM of the cell, not the top. CSS wins in browsers because
+    the CSS `transform` property out-specificities the attribute.
+  -->
   <rect class="critical-fill-v"
         x="3.75" y="3.25" width="8.5" height="11" rx="0.3"
         fill="var(--ilx-error, #8d161e)"
-        stroke="none"/>
+        stroke="none"
+        transform="matrix(1 0 0 0.12 0 12.54)"/>
 </svg>
